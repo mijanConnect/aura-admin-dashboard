@@ -82,3 +82,28 @@
     @apply bg-background text-foreground;
   }
 }
+
+/* Input styles (Label) */
+.mr-custom-label {
+  font-size: 16px;
+  font-weight: 500;
+  color: white;
+}
+
+/* Input styles (Input field) */
+.mr-custom-input {
+  background-color: rgba(255, 255, 255, 0.2);
+  color: #ffffff;
+  border: 1px solid #ffffff;
+  height: 50px;
+  padding: 0 14px;
+  border-radius: 8px;
+  font-size: 16px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.mr-custom-input::placeholder {
+  color: #b1b0b0 !important;
+  opacity: 1;
+}
