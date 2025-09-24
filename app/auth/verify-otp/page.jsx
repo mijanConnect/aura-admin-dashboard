@@ -10,7 +10,7 @@ export default function VerifyOTPPage() {
       <div className="text-center">
         <Image src={Logo} alt="Logo" className="mx-auto mb-5" />
         <p className="text-gray-50 mb-6 text-[16px]">
-          Enter the OTP sent to your registered email or phone number.
+          Enter the Verification Code For Verify Your Email
         </p>
       </div>
       <VerifyOTPForm />

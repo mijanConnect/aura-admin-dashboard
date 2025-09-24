@@ -35,7 +35,7 @@ export default function SetPasswordForm() {
       await new Promise((resolve) => setTimeout(resolve, 1000));
 
       // On success, redirect to dashboard
-      router.push("/dashboard");
+      router.push("/auth/login");
     } catch (err) {
       setError("Failed to update password. Please try again.");
     } finally {

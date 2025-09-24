@@ -1,7 +1,7 @@
 "use client";
 
 import SetPasswordForm from "@/components/auth/SetPasswordForm";
-import Logo from "@/public/assets/Logo.png";
+import Logo from "@/public/assets/auth/forgot-icon.png";
 import Image from "next/image";
 
 export default function SetPasswordPage() {

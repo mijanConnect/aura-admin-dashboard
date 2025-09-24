@@ -18,7 +18,7 @@ export default function AuthLayout({ children }) {
   const getImageForRoute = () => {
     if (pathname.includes("signup")) return SignupImage;
     if (pathname.includes("forgot-password")) return ForgotImage;
-    if (pathname.includes("verify-opt")) return VerifyOTP;
+    if (pathname.includes("verify-otp")) return VerifyOTP;
     if (pathname.includes("set-password")) return SetPassword;
 
     return LoginImage; // default

@@ -39,7 +39,7 @@ export default function ForgotPasswordPage() {
 
       // 👉 Optional: redirect after some delay
       setTimeout(() => {
-        router.push("/auth/login");
+        router.push("/auth/verify-otp");
       }, 2500);
     } catch (err) {
       setError("Something went wrong. Please try again.");
