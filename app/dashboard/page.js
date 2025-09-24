@@ -57,7 +57,7 @@ const DashboardPage = () => {
     <div className="">
       <div className="">
         {/* Top Row - Revenue Chart and Statistics */}
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 mb-10">
           {/* Total Revenue Chart */}
           <div className="lg:col-span-2">
             <Card className="bg-slate-500 border-slate-400 text-white">
@@ -121,9 +121,9 @@ const DashboardPage = () => {
           </div>
 
           {/* Statistics Cards */}
-          <div className="space-y-4">
-            <Card className="bg-slate-500 border-slate-400 text-white">
-              <CardHeader className="pb-2">
+          <div className="space-y-6 ">
+            <Card className="bg-slate-500 border-slate-400 text-white ">
+              <CardHeader className="pb-2 mb-10 mt-7">
                 <div className="flex justify-between items-center">
                   <CardTitle className="text-white font-medium">
                     Statistics
@@ -137,17 +137,17 @@ const DashboardPage = () => {
                   </Button>
                 </div>
               </CardHeader>
-              <CardContent className="space-y-3">
-                <div className="grid grid-cols-2 gap-3">
-                  <div className="bg-slate-400 rounded-lg p-3">
-                    <div className="flex items-center space-x-2 mb-1">
+              <CardContent className="space-y-6 mb-6">
+                <div className="grid grid-cols-2 gap-6">
+                  <div className="bg-slate-400 rounded-lg p-4">
+                    <div className="flex items-center space-x-2 mb-3">
                       <Users className="w-4 h-4" />
                       <span className="text-xs text-slate-200">Total User</span>
                     </div>
                     <div className="text-xl font-semibold">500</div>
                   </div>
-                  <div className="bg-slate-400 rounded-lg p-3">
-                    <div className="flex items-center space-x-2 mb-1">
+                  <div className="bg-slate-400 rounded-lg p-4">
+                    <div className="flex items-center space-x-2 mb-3">
                       <TrendingUp className="w-4 h-4" />
                       <span className="text-xs text-slate-200">
                         Earn From AURA+
@@ -155,8 +155,8 @@ const DashboardPage = () => {
                     </div>
                     <div className="text-xl font-semibold">500</div>
                   </div>
-                  <div className="bg-slate-400 rounded-lg p-3">
-                    <div className="flex items-center space-x-2 mb-1">
+                  <div className="bg-slate-400 rounded-lg p-4">
+                    <div className="flex items-center space-x-2 mb-3">
                       <ShoppingBag className="w-4 h-4" />
                       <span className="text-xs text-slate-200">
                         Earn From AP Shop
@@ -164,8 +164,8 @@ const DashboardPage = () => {
                     </div>
                     <div className="text-xl font-semibold">2000</div>
                   </div>
-                  <div className="bg-slate-400 rounded-lg p-3">
-                    <div className="flex items-center space-x-2 mb-1">
+                  <div className="bg-slate-400 rounded-lg p-4">
+                    <div className="flex items-center space-x-2 mb-3">
                       <DollarSign className="w-4 h-4" />
                       <span className="text-xs text-slate-200">
                         Total Revenue
@@ -180,38 +180,37 @@ const DashboardPage = () => {
         </div>
 
         {/* User Engagement Section */}
-        <div className="bg-slate-500 rounded-lg p-4">
-          <div className="flex justify-between items-center mb-4">
-            <div>
-              <h3 className="text-white font-medium mb-1">User Engagement</h3>
-              <p className="text-slate-300 text-sm">
-                An overview of AURA user activity and demographics
-              </p>
-            </div>
-            <div className="flex items-center space-x-2">
-              <Button
-                variant="ghost"
-                size="sm"
-                className="text-white hover:bg-slate-400"
-              >
-                Last 24 Hours
-              </Button>
-              <input
-                type="date"
-                defaultValue="2025-09-02"
-                className="bg-slate-600 text-white border border-slate-400 rounded px-3 py-1 text-sm"
-              />
-              <input
-                type="date"
-                defaultValue="2025-09-03"
-                className="bg-slate-600 text-white border border-slate-400 rounded px-3 py-1 text-sm"
-              />
-              <Button size="sm" className="bg-slate-600 hover:bg-slate-700">
-                Apply
-              </Button>
-            </div>
+        <div className="flex justify-between items-center mb-4">
+          <div>
+            <h3 className="text-white font-medium mb-1">User Engagement</h3>
+            <p className="text-slate-300 text-sm">
+              An overview of AURA user activity and demographics
+            </p>
           </div>
-
+          <div className="flex items-center space-x-2">
+            <Button
+              variant="ghost"
+              size="sm"
+              className="text-white hover:bg-slate-400"
+            >
+              Last 24 Hours
+            </Button>
+            <input
+              type="date"
+              defaultValue="2025-09-02"
+              className="bg-slate-600 text-white border border-slate-400 rounded px-3 py-1 text-sm"
+            />
+            <input
+              type="date"
+              defaultValue="2025-09-03"
+              className="bg-slate-600 text-white border border-slate-400 rounded px-3 py-1 text-sm"
+            />
+            <Button size="sm" className="bg-slate-600 hover:bg-slate-700">
+              Apply
+            </Button>
+          </div>
+        </div>
+        <div className="bg-slate-500 rounded-lg p-4 mb-8">
           {/* AURA+ Subscriptions */}
           <div className="mb-6">
             <h4 className="text-white font-medium mb-3">AURA+ SUBSCRIPTIONS</h4>
