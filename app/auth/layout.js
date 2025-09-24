@@ -7,7 +7,9 @@ import AuthGuard from "@/components/auth/AuthGuard";
 import AuthBg from "@/public/assets/auth-bg.png";
 import LoginImage from "@/public/assets/auth/login.png";
 import SignupImage from "@/public/assets/auth/signup.png";
-// import ForgotImage from "@/public/assets/auth/forgot.png";
+import ForgotImage from "@/public/assets/auth/forgot-password.png";
+import VerifyOTP from "@/public/assets/auth/verify-otp.png";
+import SetPassword from "@/public/assets/auth/set-password.png";
 
 export default function AuthLayout({ children }) {
   const pathname = usePathname();
@@ -15,7 +17,10 @@ export default function AuthLayout({ children }) {
   // pick image based on route
   const getImageForRoute = () => {
     if (pathname.includes("signup")) return SignupImage;
-    if (pathname.includes("forgot")) return LoginImage; // or ForgotImage if you add it
+    if (pathname.includes("forgot-password")) return ForgotImage;
+    if (pathname.includes("verify-opt")) return VerifyOTP;
+    if (pathname.includes("set-password")) return SetPassword;
+
     return LoginImage; // default
   };
 

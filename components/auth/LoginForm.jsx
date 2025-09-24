@@ -53,13 +53,12 @@ export default function LoginPage() {
 
   return (
     <div className="space-y-6">
-      <form onSubmit={handleSubmit} className="space-y-4">
+      <form onSubmit={handleSubmit} className="space-y-5">
         {error && (
-          <div className="bg-gray-50/30 border border-red-200 text-red-600 px-4 py-3 rounded">
+          <div className="bg-red-50 border border-red-200 text-red-600 px-4 py-3 rounded">
             {error}
           </div>
         )}
-
         <FormInput
           id="email"
           type="email"
@@ -86,7 +85,16 @@ export default function LoginPage() {
           inputStyle={{}} // inline styles if needed
         />
 
-        <div className="pt-6">
+        <div className="flex justify-end">
+          <a
+            href="/auth/forgot-password"
+            className="text-gray-50 text-[16px] hover:underline"
+          >
+            Forgot Password?
+          </a>
+        </div>
+
+        <div className="pt-4">
           <Button type="submit" className="w-full" disabled={isLoading}>
             {isLoading ? "Signing in..." : "Sign In"}
           </Button>

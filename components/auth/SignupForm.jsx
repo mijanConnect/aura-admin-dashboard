@@ -53,13 +53,12 @@ export default function SignupPage() {
 
   return (
     <div className="space-y-6">
-      <form onSubmit={handleSubmit} className="space-y-4">
+      <form onSubmit={handleSubmit} className="space-y-5">
         {error && (
           <div className="bg-red-50 border border-red-200 text-red-600 px-4 py-3 rounded">
             {error}
           </div>
         )}
-
         <FormInput
           id="name"
           label="Name"
@@ -108,9 +107,11 @@ export default function SignupPage() {
           inputStyle={{}} // inline styles if needed
         />
 
-        <Button type="submit" className="w-full" disabled={isLoading}>
-          {isLoading ? "Signing up..." : "Sign Up"}
-        </Button>
+        <div className="pt-6">
+          <Button type="submit" className="w-full" disabled={isLoading}>
+            {isLoading ? "Signing up..." : "Sign Up"}
+          </Button>
+        </div>
       </form>
     </div>
   );
