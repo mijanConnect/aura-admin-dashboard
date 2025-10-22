@@ -1,36 +1,264 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Dashboard Management System
 
-## Getting Started
+A comprehensive dashboard built with Next.js 15, Shadcn UI, Redux Toolkit Query, and authentication system.
 
-First, run the development server:
+## 🚀 Features
 
+### Core Management Modules
+- **Dashboard Overview** - Real-time statistics and analytics
+- **Event Management** - Create, manage, and track gaming events
+- **Game Management** - Handle game listings and configurations
+- **User Management** - Comprehensive user administration
+- **Promo Code Management** - Create and track promotional campaigns
+- **Shop Management** - E-commerce product management
+- **Video Call Settings** - Conference call configurations
+- **Aura+ Package** - Premium subscription management
+- **Community Guidelines** - Content moderation and rules
+- **Push Notifications** - User engagement and messaging
+- **Settings** - System and user preferences
+
+### Technical Features
+- **Authentication System** - Secure login/logout with session management
+- **State Management** - Redux Toolkit Query for efficient data handling
+- **Responsive Design** - Mobile-first approach with Tailwind CSS
+- **Modern UI Components** - Shadcn UI component library
+- **Mock API Integration** - Demonstration with realistic mock data
+
+## 🛠 Tech Stack
+
+- **Framework**: Next.js 15 (App Router)
+- **Language**: JavaScript
+- **UI Library**: Shadcn UI
+- **Styling**: Tailwind CSS
+- **State Management**: Redux Toolkit + RTK Query
+- **Authentication**: Custom auth with localStorage persistence
+- **Icons**: Lucide React
+
+## 📁 Project Structure
+
+```
+/
+├── app/
+│   ├── dashboard/           # Dashboard pages
+│   │   ├── events/         # Event management
+│   │   ├── games/          # Game management
+│   │   ├── users/          # User management
+│   │   ├── promo-codes/    # Promo code management
+│   │   ├── shop/           # Shop management
+│   │   ├── video-calls/    # Video call settings
+│   │   ├── aura-package/   # Premium package management
+│   │   ├── guidelines/     # Community guidelines
+│   │   ├── notifications/  # Push notifications
+│   │   ├── settings/       # System settings
+│   │   └── layout.js       # Dashboard layout wrapper
+│   ├── login/              # Authentication page
+│   ├── layout.tsx          # Root layout with providers
+│   └── page.tsx            # Landing page
+├── components/
+│   ├── auth/               # Authentication components
+│   ├── layout/             # Layout components (Header, Sidebar)
+│   ├── providers/          # Redux store provider
+│   └── ui/                 # Shadcn UI components
+├── store/
+│   ├── api/                # RTK Query API slices
+│   │   ├── authApi.js      # Authentication API
+│   │   ├── dashboardApi.js # Dashboard data API
+│   │   ├── eventsApi.js    # Events API
+│   │   ├── gamesApi.js     # Games API
+│   │   ├── usersApi.js     # Users API
+│   │   ├── promoApi.js     # Promo codes API
+│   │   └── shopApi.js      # Shop API
+│   ├── slices/             # Redux slices
+│   │   ├── authSlice.js    # Authentication state
+│   │   └── uiSlice.js      # UI state management
+│   └── store.js            # Store configuration
+└── lib/
+    └── utils.ts            # Utility functions
+```
+
+## 🚦 Getting Started
+
+### Prerequisites
+- Node.js 18+ 
+- npm or yarn
+
+### Installation
+
+1. **Clone the repository**
+```bash
+git clone <repository-url>
+cd dashboard-project
+```
+
+2. **Install dependencies**
+```bash
+npm install
+# or
+yarn install
+```
+
+3. **Start development server**
 ```bash
 npm run dev
 # or
 yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+4. **Open your browser**
+Navigate to [http://localhost:3000](http://localhost:3000)
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 🔐 Authentication
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### Demo Credentials
 
-## Learn More
+**Admin Account:**
+- Email: `admin@example.com`
+- Password: `admin123`
 
-To learn more about Next.js, take a look at the following resources:
+**User Account:**
+- Email: `user@example.com` 
+- Password: `user123`
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### Authentication Features
+- Secure login/logout
+- Session persistence with localStorage
+- Protected routes with AuthGuard
+- Automatic token validation
+- Role-based access (admin/user)
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## 🎨 UI Components
 
-## Deploy on Vercel
+The dashboard uses Shadcn UI components for consistent design:
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- **Navigation**: Responsive sidebar with collapsible menu
+- **Cards**: Information display with hover effects
+- **Forms**: Input fields with validation states
+- **Tables**: Data display with sorting and filtering
+- **Modals**: Overlay dialogs for actions
+- **Badges**: Status indicators and labels
+- **Buttons**: Various styles and states
+- **Charts**: Data visualization (placeholder structure)
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## 🔄 State Management
+
+### Redux Store Structure
+- **auth**: User authentication state
+- **ui**: UI preferences (sidebar, theme, notifications)
+- **APIs**: RTK Query endpoints for data fetching
+
+### API Integration
+All APIs use mock data for demonstration:
+- Simulated network delays
+- Realistic data structures  
+- Error handling examples
+- Loading states
+
+## 📱 Responsive Design
+
+The dashboard is fully responsive with:
+- **Mobile (< 768px)**: Collapsed sidebar, touch-friendly interface
+- **Tablet (768px - 1024px)**: Adaptive grid layouts
+- **Desktop (> 1024px)**: Full sidebar, multi-column layouts
+
+## 🎯 Key Features Detail
+
+### Dashboard Overview
+- Real-time statistics cards
+- Recent activity feed
+- Performance metrics
+- Quick action buttons
+
+### Event Management
+- Event creation and editing
+- Participant tracking
+- Status management (active/upcoming/completed)
+- Image gallery support
+
+### User Management  
+- User listing with search/filter
+- Role management (admin/moderator/user)
+- Account status control
+- Activity tracking
+
+### Shop Management
+- Product catalog management
+- Inventory tracking
+- Category organization
+- Sales analytics
+
+### Notification System
+- Push notification creation
+- Audience targeting
+- Scheduling options
+- Delivery tracking
+
+## 🔧 Customization
+
+### Adding New Routes
+1. Create page component in `app/dashboard/[route]/page.js`
+2. Add route to sidebar configuration in `components/layout/Sidebar.js`
+3. Create API slice if needed in `store/api/`
+
+### Styling Customization
+- Modify `tailwind.config.ts` for theme changes
+- Update CSS variables in `app/globals.css`
+- Customize Shadcn components in `components/ui/`
+
+### State Management
+- Add new slices in `store/slices/`
+- Create API endpoints in `store/api/`
+- Update store configuration in `store/store.js`
+
+## 📊 Mock Data
+
+The project includes comprehensive mock data for:
+- User accounts and profiles
+- Gaming events and tournaments
+- Product catalog
+- Notification history
+- Analytics and statistics
+- System settings
+
+## 🚀 Deployment
+
+### Build for Production
+```bash
+npm run build
+npm start
+```
+
+### Environment Variables
+Create `.env.local` for environment-specific configurations:
+```env
+NEXT_PUBLIC_API_URL=your_api_url
+NEXT_PUBLIC_APP_NAME=Dashboard Management System
+```
+
+## 🔮 Future Enhancements
+
+- Real API integration
+- Advanced analytics dashboard
+- Multi-language support
+- Dark/light theme toggle
+- Export functionality
+- Advanced user permissions
+- Real-time notifications with WebSocket
+- Data visualization charts
+- Advanced filtering and search
+- Bulk operations support
+
+## 📞 Support
+
+For questions or support:
+1. Check the documentation
+2. Review the code comments
+3. Test with provided demo data
+4. Examine the Redux DevTools for state management
+
+## 📝 License
+
+This project is for demonstration purposes. Customize according to your needs.
+
+---
+
+**Built with ❤️ using Next.js 15, Shadcn UI, and Redux Toolkit Query**
